@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href="cssreset.css">
+    <title> São Luis </title>
+    <meta charset="utf-8">
+    <link rel="icon" href="fotos/bandeira.png">
+    <link rel="stylesheet" href="formatacao.css">
+
+</head>
+
+
+<body>
+
+    <h1> São Luis - Contato </h1>
+
+        <nav class="nave">
+            <ul>
+                <li> <a href="inicio.html">Inicio</a> </li>
+                <li> <a href="sobre.html">Sobre</a> </li>
+                <li> <a href="pontos.html">Pontos Turisticos</a> </li>
+                <li> <a href="contato.html">Contato</a> </li>
+                <li> <a href="https://www.google.com/search?q=sao+luis+&client=opera-gx&bih=754&biw=1495&hl=pt-BR&sxsrf=ALeKk01JKgJWgJLNBuW2BigxDfJvj3RErw%3A1628286598221&ei=hq4NYaHzDIja1sQPkIaQqAc&oq=sao+luis+&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBQguEIAEMgUILhCABDIFCC4QgAQyCgguEMcBEKMCEAoyBAguEAoyBQgAEIAEMgoILhDHARCvARAKMgoILhDHARCvARAKMgsILhCABBDHARCvAToHCCMQsAMQJzoHCAAQRxCwAzoKCC4QsAMQyAMQQ0oFCDgSATFKBAhBGABQtBxY6B1g1R9oAXACeACAAcgCiAHEBZIBBzAuMi4wLjGYAQCgAQHIAQ_AAQE&sclient=gws-wiz&ved=0ahUKEwihzp2isJ3yAhUIrZUCHRADBHUQ4dUDCA0&uact=5">Mais Informações</a> </li>
+            </ul>
+        </nav>
+
+    <blockquote class="bckcadastro">
+        <form>
+
+            <fieldset>
+
+                <label class="cadastro" for="Nome"> Nome: </label>
+                    <input id="nome" nome="Nome" placeholder="Digite Seu Nome" autofocus >
+
+                <label class="cadastro" for="e-mail"> E-mail: </label>
+                    <input id="e-mail" type="email" placeholder="Digite seu E-mail">
+
+                <label class="cadastro" for="Mensagem"> Mensagem: </label>
+                    <textarea id="mensagem" nome="Nome" placeholder="Digite Sua Mensagem" cols= "40" rows="10"> </textarea>
+
+                <button id="button" type="submit">Enviar</button>
+
+            </fieldset>
+
+        </form>
+    
+    </blockquote>
+
+    <script>
+
+        let dados = [];
+        const CDados = (ev) => {
+            ev.preventDefault();
+
+            let dados2 = {
+                nome : document.getElementById("nome").value,
+                mail : document.getElementById("e-mail").value,
+                mensagem : document.getElementById("mensagem").value
+            }
+
+
+            dados.push(dados2);
+            document.forms[0].reset();
+
+            console.log(JSON.stringify(dados, null, 2));
+            alert ("Sua Mensagem foi enviada")
+
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("button").addEventListener("click", CDados);
+            }); 
+
+    </script>
+
+</body>

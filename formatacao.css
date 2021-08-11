@@ -1,0 +1,124 @@
+:root{
+    --color-1: #d6ebff;
+    --color-2: #2E4757;
+    --color-3: #F2F2F2;
+    --color-white: white;
+    --color-black: black;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(fotos/mosaico.jpg) ;
+    position: absolute;
+} 
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--color-2);
+    color: var(--color-white);
+    text-shadow: 2px 2px var(--color-black);
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 4px  var(--color-black) solid ;
+    font-size: 2.2rem;
+}
+
+.nave ul{
+    padding: 0px;
+    list-style-type: none;
+    background-color: var(--color-black);
+    text-align: center;
+}
+
+.nave ul li{
+    display: inline;
+}
+
+.nave ul li a{
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--color-white);
+    padding: 20px;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+.nave li a:hover{
+    background-color: var(--color-2);
+}
+
+
+h3{
+    color: var(--color-black);
+    text-shadow: 1px 1px var(--color-white);
+    font-size: 1.8rem;
+    border-bottom: 2px var(--color-2) solid;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+.fbox{
+    display: flex;
+    padding: 10px;
+}
+
+.animar{
+    background-color: var(--color-3);
+    width: 900px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-inline: 300px;
+    border: 3px var(--color-2) solid;
+    transition: 0.2s transform ease-in-out;
+}
+
+.animar:hover{
+    transform: scale(1.1);
+    transition: 0.3s transform cubic-bezier(0.42 , 0, 0.65, 1.7);
+}
+
+.bckcadastro{
+    background-color: var(--color-3);
+    width: 450px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-inline: auto;
+    border: 3px var(--color-2) solid;
+}
+
+.same{
+    width: 400px;
+    box-shadow:2px 2px black;
+}
+
+.seimg{
+    width: 390px;
+    box-shadow:2px 2px black;
+    margin-left: 20px;
+}
+
+.seimg2{
+    width: 400px;
+    box-shadow:2px 2px black;
+    margin-left: 20px;
+}
+
+.txtimg{
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.cadastro{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:block;
+}
+
+input{
+    width: 300px;
+}
